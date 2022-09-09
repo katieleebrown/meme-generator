@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100%;
+  font-family: 'Karla', sans-serif;
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+header {
+  width: 100%;
+  background-image: linear-gradient(to right, #672280, #A626D3);
+  height: auto;
+  min-height: 65px;
+  padding: 2%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.titleHolder {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.titleHolder>img {
+  width: 15%;
+  height: auto;
+  margin: 0 2%;
+}
+
+nav h3 {
+  margin: 0;
+}
+
+/* Form Section */
+#memeForm {
+  width: 100%;
+  padding: 7%;
+}
+
+#memeForm>form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.textBox {
+  width: 48%;
+  margin: 1%;
+  border: 1px solid #D5D4D8;
+  border-radius: 5px;
+  min-height: 40px;
+  padding: 1% 2%;
+  font-family: 'Karla', sans-serif;
+}
+
+#inputButton {
+  width: 98%;
+  border: none;
+  background-image: linear-gradient(to right, #672280, #A626D3);
+  margin: 2% auto;
+  padding: 2%;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
 }
