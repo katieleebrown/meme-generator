@@ -46,16 +46,21 @@ nav h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
 }
 
 .inputRow {
-  width: 100%;
+  width: 98%;
+  margin: auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .textBox {
-  width: 48%;
+  width: 47%;
   margin: 1%;
   border: 1px solid #D5D4D8;
   border-radius: 5px;
@@ -68,7 +73,7 @@ nav h3 {
   width: 98%;
   border: none;
   background-image: linear-gradient(to right, #672280, #A626D3);
-  margin: 2% auto;
+  margin: 2% 4% 2% 1%;
   padding: 2%;
   color: white;
   border-radius: 5px;
@@ -76,4 +81,20 @@ nav h3 {
   font-size: 1.25rem;
   font-weight: 500;
   cursor: pointer;
+}
+
+.imageHolder {
+  width: 95%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.imageHolder>img {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  border: 2px solid #672280;
+  border-radius: 5px;
 }
