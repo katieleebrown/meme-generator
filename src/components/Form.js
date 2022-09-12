@@ -2,7 +2,7 @@ import memesData from '../memesData'
 import { useState } from 'react'
 
 export default function Form() {
-    const [memeURL, changeURL] = useState("https://i.imgflip.com/30b1gx.jpg")
+    const [memeURL, changeURL] = useState("")
 
     function getImage() {
         const memesArray = memesData.data.memes
