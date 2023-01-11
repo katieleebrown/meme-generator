@@ -88,13 +88,30 @@ nav h3 {
   margin: 1% auto;
   height: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+#topText,
+#bottomText {
+  z-index: 1;
+  margin: 0;
+  padding: 2%;
+  position: relative;
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+#bottomText {
+  padding-bottom: .5rem;
+  bottom: 0px;
 }
 
 .imageHolder>img {
   width: 80%;
   height: auto;
   margin: auto;
-  /* border: 2px solid #672280;
-  border-radius: 5px; */
 }
