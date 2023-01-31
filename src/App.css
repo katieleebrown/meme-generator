@@ -36,10 +36,17 @@ nav h3 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 /* Form Section */
 #memeForm {
   width: 100%;
   padding: 4% 7%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 #memeForm>form {

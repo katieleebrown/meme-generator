@@ -5,7 +5,7 @@ export default function Header() {
                 <img src="../images/trollFace.png" alt="Classic Troll Face Memee" />
                 <h3>Meme Generator</h3>
             </div>
-            <p>React Course - Project 3</p>
+            <p>Built by <a href="https://katieleebrown.netlify.app/">Katie Brown</a></p>
         </header>
     )
 }
