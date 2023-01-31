@@ -5,12 +5,20 @@ export default function Form() {
     const [meme, setMeme] = useState({
         memeURL: "https://i.imgflip.com/3oevdk.jpg",
         memeAlt: "Bernie I Am Once Again Asking For Your Support",
-    })
-
-    const [formText, setFormText] = useState({
         topText: "",
         bottomText: ""
     })
+
+    function handleChange(event) {
+        const { name, value } = event.target
+
+        setMeme(prevMeme => {
+            return {
+                ...prevMeme,
+                [name]: value
+            }
+        })
+    }
 
     function createMeme() {
         const memesArray = memesData.data.memes
@@ -20,17 +28,9 @@ export default function Form() {
 
         setMeme(prevMeme => {
             return {
+                ...prevMeme,
                 memeURL: newURL,
                 memeAlt: newAlt,
-            }
-        })
-    }
-
-    function updateText(event) {
-        setFormText(prevFormText => {
-            return {
-                ...prevFormText,
-                [event.target.name]: event.target.value
             }
         })
     }
@@ -44,25 +44,25 @@ export default function Form() {
                         className="textBox"
                         name="topText"
                         placeholder="Top text"
-                        value={formText.topText}
-                        onChange={updateText}
+                        value={meme.topText}
+                        onChange={handleChange}
                     />
                     <input
                         type='text'
                         className="textBox"
                         name="bottomText"
                         placeholder="Bottom text"
-                        value={formText.bottomText}
-                        onChange={updateText}
+                        value={meme.bottomText}
+                        onChange={handleChange}
                     />
                 </div>
             </form>
 
             <button onClick={createMeme} id="inputButton">Get a new meme image</button>
             <section className="imageHolder">
-                <h2 id='topText'>{formText.topText}</h2>
+                <h2 id='topText'>{meme.topText}</h2>
                 <img src={meme.memeURL} alt={meme.memeAlt} />
-                <h2 id='bottomText'>{formText.bottomText}</h2>
+                <h2 id='bottomText'>{meme.bottomText}</h2>
             </section>
         </section>
     )
