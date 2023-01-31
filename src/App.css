@@ -52,7 +52,7 @@ nav h3 {
 }
 
 .inputRow {
-  width: 98%;
+  width: 96%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -90,28 +90,46 @@ nav h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 #topText,
 #bottomText {
   z-index: 1;
-  margin: 0;
-  padding: 2%;
-  position: relative;
-  color: white;
+  text-align: center;
+  position: absolute;
+  margin: 15px 0;
+  padding: 0 5px;
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 4rem;
   font-weight: bold;
+  color: white;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
+  text-shadow:
+    2px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+#topText {
+  top: 0px;
 }
 
 #bottomText {
-  padding-bottom: .5rem;
   bottom: 0px;
 }
 
 .imageHolder>img {
-  width: 80%;
+  width: 99%;
   height: auto;
   margin: auto;
+  border-radius: 3px;
 }
