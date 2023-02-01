@@ -1,4 +1,3 @@
-import memesData from '../memesData'
 import { useState, useEffect } from 'react'
 
 export default function Form() {
@@ -9,18 +8,16 @@ export default function Form() {
         bottomText: ""
     })
 
-    const [allMemes, setAllMemes] = useState(memesData)
+    const [allMemes, setAllMemes] = useState([])
 
     useEffect(function () {
         fetch("https://api.imgflip.com/get_memes")
             .then(res => res.json())
-            .then(data => setAllMemes(data))
-            .then(console.log(allMemes.data.memes[0]))
+            .then(data => setAllMemes(data.data.memes))
     }, [])
 
     function handleChange(event) {
         const { name, value } = event.target
-
         setMeme(prevMeme => {
             return {
                 ...prevMeme,
@@ -30,16 +27,12 @@ export default function Form() {
     }
 
     function createMeme() {
-        const memesArray = allMemes.data.memes
-        const randomNumber = Math.floor(Math.random() * memesArray.length)
-        const newURL = memesArray[randomNumber].url
-        const newAlt = memesArray[randomNumber].name
-
+        const randomNumber = Math.floor(Math.random() * allMemes.length)
         setMeme(prevMeme => {
             return {
                 ...prevMeme,
-                memeURL: newURL,
-                memeAlt: newAlt,
+                memeURL: allMemes[randomNumber].url,
+                memeAlt: allMemes[randomNumber].name
             }
         })
     }
